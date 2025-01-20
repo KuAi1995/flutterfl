@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: Text("open new route"),
+              child: Text("open base widget route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
