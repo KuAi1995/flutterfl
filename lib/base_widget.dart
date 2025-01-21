@@ -23,6 +23,18 @@ class BaseWidget extends StatelessWidget {
             Text("文字1.5倍大小",
               textScaleFactor: 1.5,
             ),
+            Text(" "),
+            Text("TextStyle",
+              style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 18.0,
+                  height: 1.2,
+                  fontFamily: "Courier",
+                  background: Paint()..color=Colors.yellow,
+                  decoration:TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.dashed
+              ),
+            ),
           ],
         )
       ),
