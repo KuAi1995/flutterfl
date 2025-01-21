@@ -10,7 +10,21 @@ class BaseWidget extends StatelessWidget {
         title: Text("Base Widget"),
       ),
       body: Center(
-        child: Text("There are some base widget"),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text("There are some Text"),
+            Text("左对齐",
+              textAlign: TextAlign.left,
+            ),
+            Text("做大行数1行，多余文字省略号截断"*4,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text("文字1.5倍大小",
+              textScaleFactor: 1.5,
+            ),
+          ],
+        )
       ),
     );
   }
