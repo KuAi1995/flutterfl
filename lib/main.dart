@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfl/base_widget.dart';
+import 'package:flutterfl/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,13 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: Text("open base widget route"),
+              child: Text("open Text Widget route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return BaseWidget();
+                    return TextWidget();
                   }),
                 );
               },

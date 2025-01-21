@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BaseWidget extends StatelessWidget {
-  const BaseWidget({super.key});
+class TextWidget extends StatelessWidget {
+  const TextWidget({super.key});
   // 声明文本样式
   static const textStyle = const TextStyle(
     fontFamily: 'Roboto',
@@ -20,7 +20,7 @@ class BaseWidget extends StatelessWidget {
             Text("左对齐",
               textAlign: TextAlign.left,
             ),
-            Text("做大行数1行，多余文字省略号截断"*4,
+            Text("最大行数1行，多余文字省略号截断 "*4,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
