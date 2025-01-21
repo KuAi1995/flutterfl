@@ -49,7 +49,28 @@ class BaseWidget extends StatelessWidget {
                       ),
                   ),
                 ]
-            ))
+            )),
+        DefaultTextStyle(
+          //1.设置文本默认样式
+          style: TextStyle(
+            color:Colors.red,
+            fontSize: 20.0,
+          ),
+          textAlign: TextAlign.start,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text("DefaultTextStyle"),
+              Text("DefaultTextStyle"),
+              Text("TextStyle inherit: false",
+                style: TextStyle(
+                    inherit: false, //2.不继承默认样式
+                    color: Colors.grey
+                ),
+              ),
+            ],
+          ),
+        ),
           ],
         )
       ),
