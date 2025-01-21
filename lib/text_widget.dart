@@ -11,7 +11,7 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Base Widget"),
+        title: Text("Text Widget"),
       ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
