@@ -35,6 +35,21 @@ class BaseWidget extends StatelessWidget {
                   decorationStyle: TextDecorationStyle.dashed
               ),
             ),
+            Text(" "),
+            Text("TextSpan"),
+            Text.rich(TextSpan(
+                children: [
+                  TextSpan(
+                      text: "Home: "
+                  ),
+                  TextSpan(
+                      text: "https://flutterchina.club",
+                      style: TextStyle(
+                          color: Colors.blue
+                      ),
+                  ),
+                ]
+            ))
           ],
         )
       ),
