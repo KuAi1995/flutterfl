@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class BaseWidget extends StatelessWidget {
   const BaseWidget({super.key});
+  // 声明文本样式
+  static const textStyle = const TextStyle(
+    fontFamily: 'Roboto',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +54,10 @@ class BaseWidget extends StatelessWidget {
                   ),
                 ]
             )),
+            Text(
+              "Use the Roboto font for this text",
+              style: textStyle,
+            ),
         DefaultTextStyle(
           //1.设置文本默认样式
           style: TextStyle(
