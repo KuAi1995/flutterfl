@@ -30,6 +30,9 @@ class _ImageWidget extends State<ImageWidget> {
             width: 100.0,
           ),
           ImageAndIconRoute(),
+          Icon(Icons.accessible,color: Colors.green),
+          Icon(Icons.error,color: Colors.green),
+          Icon(Icons.fingerprint,color: Colors.green),
         ],
       )),
     );
