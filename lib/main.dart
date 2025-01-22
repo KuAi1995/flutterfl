@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfl/button_widget.dart';
 import 'package:flutterfl/text_widget.dart';
 
 void main() {
@@ -52,6 +53,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(builder: (context) {
                     return TextWidget();
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open Button Widget route"),
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return ButtonWidget(title: '',);
                   }),
                 );
               },
