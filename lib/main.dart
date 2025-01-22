@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfl/button_widget.dart';
-import 'package:flutterfl/text_widget.dart';
+import 'package:flutterfl/basewidget/button_widget.dart';
+import 'package:flutterfl/basewidget/text_widget.dart';
 
 void main() {
   runApp(const MyApp());
