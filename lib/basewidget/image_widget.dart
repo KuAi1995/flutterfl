@@ -19,7 +19,7 @@ class _ImageWidget extends State<ImageWidget> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image(image: AssetImage("images/1.jpg"), width: 100.0),
+          Image(image: AssetImage("assets/images/1.jpg"), width: 100.0),
           Image(
             image: NetworkImage(
                 "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
@@ -42,7 +42,7 @@ class _ImageWidget extends State<ImageWidget> {
 class ImageAndIconRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var img = AssetImage("imgs/avatar.png");
+    var img = AssetImage("assets/images/1.jpg");
     return SingleChildScrollView(
       child: Column(
           children: <Image>[

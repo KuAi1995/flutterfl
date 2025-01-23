@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutterfl/basewidget/button_widget.dart';
 import 'package:flutterfl/basewidget/text_widget.dart';
 
+import 'basewidget/image_widget.dart';
+import 'basewidget/switch_and_checkBox_widget.dart';
+import 'basewidget/text_field_widget.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -65,6 +69,42 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(builder: (context) {
                     return ButtonWidget(title: '',);
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open Image Widget route"),
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return ImageWidget(title: '',);
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open SwitchAndCheckBox Widget route"),
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return SwitchAndCheckBoxWidget(title: '',);
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open TextField Widget route"),
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return TextFieldWidget(title: '',);
                   }),
                 );
               },
