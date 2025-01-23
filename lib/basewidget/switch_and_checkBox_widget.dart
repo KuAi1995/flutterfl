@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SwitchAndCheckBoxWidget extends StatefulWidget {
-  SwitchAndCheckBoxWidget({Key? key, required this.title}) : super(key: key);
+class SwitchAndCheckBoxRoute extends StatefulWidget {
+  const SwitchAndCheckBoxRoute({super.key, required this.title});
+
   final String title;
 
   @override
-  _SwitchAndCheckBoxWidget createState() => _SwitchAndCheckBoxWidget();
+  State<SwitchAndCheckBoxRoute> createState() => _SwitchAndCheckBoxRouteState();
 }
 
-class _SwitchAndCheckBoxWidget extends State<SwitchAndCheckBoxWidget> {
+class _SwitchAndCheckBoxRouteState extends State<SwitchAndCheckBoxRoute> {
   bool _switchSelected = true; //维护单选开关状态
   bool _checkboxSelected = true; //维护复选框状态
 

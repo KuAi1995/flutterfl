@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ImageWidget extends StatefulWidget {
-  ImageWidget({Key? key, required this.title}) : super(key: key);
+class ImageRoute extends StatefulWidget {
+  const ImageRoute({super.key, required this.title});
+
   final String title;
 
   @override
-  _ImageWidget createState() => _ImageWidget();
+  State<ImageRoute> createState() => _ImageRouteState();
 }
 
-class _ImageWidget extends State<ImageWidget> {
+class _ImageRouteState extends State<ImageRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +31,9 @@ class _ImageWidget extends State<ImageWidget> {
             width: 100.0,
           ),
           ImageAndIconRoute(),
-          Icon(Icons.accessible,color: Colors.green),
-          Icon(Icons.error,color: Colors.green),
-          Icon(Icons.fingerprint,color: Colors.green),
+          Icon(Icons.accessible, color: Colors.green),
+          Icon(Icons.error, color: Colors.green),
+          Icon(Icons.fingerprint, color: Colors.green),
         ],
       )),
     );

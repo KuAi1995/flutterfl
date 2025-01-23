@@ -36,10 +36,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -56,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TextWidget();
+                    return TextRoute();
                   }),
                 );
               },
@@ -68,7 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return ButtonWidget(title: '',);
+                    return ButtonRoute(
+                      title: '',
+                    );
                   }),
                 );
               },
@@ -80,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return ImageWidget(title: '',);
+                    return ImageRoute(
+                      title: '',
+                    );
                   }),
                 );
               },
@@ -92,7 +94,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return SwitchAndCheckBoxWidget(title: '',);
+                    return SwitchAndCheckBoxRoute(
+                      title: '',
+                    );
                   }),
                 );
               },
@@ -104,7 +108,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TextFieldWidget(title: '',);
+                    return TextFieldRoute(
+                      title: '',
+                    );
                   }),
                 );
               },

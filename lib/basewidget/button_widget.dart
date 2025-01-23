@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatefulWidget {
-  ButtonWidget({Key? key, required this.title}) : super(key: key);
+class ButtonRoute extends StatefulWidget {
+  const ButtonRoute({super.key, required this.title});
+
   final String title;
 
   @override
-  _ButtonWidget createState() => _ButtonWidget();
+  State<ButtonRoute> createState() => _ButtonRouteState();
 }
 
-class _ButtonWidget extends State<ButtonWidget> {
+class _ButtonRouteState extends State<ButtonRoute> {
   int _counterSend = 0;
   int _counterAdd = 0;
   int _counterInfo = 0;

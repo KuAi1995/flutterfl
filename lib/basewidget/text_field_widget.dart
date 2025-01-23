@@ -1,30 +1,38 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class TextFieldWidget extends StatefulWidget {
-  TextFieldWidget({Key? key, required this.title}) : super(key: key);
+class TextFieldRoute extends StatefulWidget {
+  const TextFieldRoute({super.key, required this.title});
+
   final String title;
 
   @override
-  _TextFieldWidget createState() => _TextFieldWidget();
+  State<TextFieldRoute> createState() => _TextFieldRouteState();
 }
 
-class _TextFieldWidget extends State<TextFieldWidget> {
+class _TextFieldRouteState extends State<TextFieldRoute> {
   String _name = "";
   String _password = "";
-  TextEditingController _passwordController = TextEditingController();
-  TextEditingController _selectionController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _selectionController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
     //初始化状态
-    print("initState");
+    if (kDebugMode) {
+      print("initState");
+    }
 
     _selectionController.text = "TextSelection control";
     _selectionController.selection = TextSelection(
-        baseOffset: 2, extentOffset: _selectionController.text.length); // 注意焦点在才生效 autofocus: true
+        baseOffset: 2,
+        extentOffset:
+            _selectionController.text.length); // 注意焦点在才生效 autofocus: true
     _passwordController.addListener(() {
-      print(_passwordController.text);
+      if (kDebugMode) {
+        print(_passwordController.text);
+      }
     });
   }
 
@@ -46,7 +54,9 @@ class _TextFieldWidget extends State<TextFieldWidget> {
                 //重新构建页面
                 setState(() {
                   _name = value;
-                  print("onChange: $value");
+                  if (kDebugMode) {
+                    print("onChange: $value");
+                  }
                 });
               },
             ),
@@ -69,33 +79,43 @@ class _TextFieldWidget extends State<TextFieldWidget> {
   }
 
   @override
-  void didUpdateWidget(TextFieldWidget oldWidget) {
+  void didUpdateWidget(TextFieldRoute oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print(_passwordController.text);
-    print("didUpdateWidget ");
+    if (kDebugMode) {
+      print(_passwordController.text);
+      print("didUpdateWidget ");
+    }
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    print("deactivate");
+    if (kDebugMode) {
+      print("deactivate");
+    }
   }
 
   @override
   void dispose() {
     super.dispose();
-    print("dispose");
+    if (kDebugMode) {
+      print("dispose");
+    }
   }
 
   @override
   void reassemble() {
     super.reassemble();
-    print("reassemble");
+    if (kDebugMode) {
+      print("reassemble");
+    }
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print("didChangeDependencies");
+    if (kDebugMode) {
+      print("didChangeDependencies");
+    }
   }
 }

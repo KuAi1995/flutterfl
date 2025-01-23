@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SampleWidget extends StatelessWidget {
-  const SampleWidget({super.key});
+class SampleRoute extends StatelessWidget {
+  const SampleRoute({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,11 +10,10 @@ class SampleWidget extends StatelessWidget {
         title: Text("Sample Widget"),
       ),
       body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[],
-          )
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[],
+      )),
     );
   }
-
 }
