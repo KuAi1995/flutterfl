@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfl/basewidget/button_widget.dart';
-import 'package:flutterfl/basewidget/text_widget.dart';
+import 'package:flutterfl/basewidget/button_route.dart';
+import 'package:flutterfl/basewidget/text_route.dart';
 
-import 'basewidget/image_widget.dart';
-import 'basewidget/switch_and_checkBox_widget.dart';
-import 'basewidget/text_field_widget.dart';
+import 'basewidget/image_route.dart';
+import 'basewidget/switch_and_checkBox_route.dart';
+import 'basewidget/text_field_route.dart';
 
 void main() {
   runApp(const MyApp());
