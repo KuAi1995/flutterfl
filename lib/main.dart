@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfl/basewidget/button_route.dart';
 import 'package:flutterfl/basewidget/text_route.dart';
 
+import 'basewidget/focus_test_route.dart';
 import 'basewidget/image_route.dart';
 import 'basewidget/switch_and_checkBox_route.dart';
 import 'basewidget/text_field_route.dart';
@@ -48,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: Text("open Text Widget route"),
+              child: Text("open Text route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
@@ -60,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             TextButton(
-              child: Text("open Button Widget route"),
+              child: Text("open Button route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
@@ -74,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             TextButton(
-              child: Text("open Image Widget route"),
+              child: Text("open Image route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
@@ -88,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             TextButton(
-              child: Text("open SwitchAndCheckBox Widget route"),
+              child: Text("open SwitchAndCheckBox route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
@@ -102,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             TextButton(
-              child: Text("open TextField Widget route"),
+              child: Text("open TextField route"),
               onPressed: () {
                 //导航到新路由
                 Navigator.push(
@@ -111,6 +112,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     return TextFieldRoute(
                       title: '',
                     );
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open FocusTest route"),
+              onPressed: () {
+                //导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return FocusTestRoute();
                   }),
                 );
               },
