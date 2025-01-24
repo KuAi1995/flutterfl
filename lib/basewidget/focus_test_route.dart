@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FocusTestRoute extends StatefulWidget {
@@ -11,6 +12,20 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
   FocusNode focusNode1 = FocusNode();
   FocusNode focusNode2 = FocusNode();
   FocusScopeNode? focusScopeNode;
+
+  @override
+  void initState() {
+    super.initState();
+    // 初始化状态
+    if (kDebugMode) {
+      print("initState");
+    }
+    focusNode1.addListener(() {
+      if (kDebugMode) {
+        print("focusNode.hasFocus: ${focusNode1.hasFocus}");
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +71,62 @@ class _FocusTestRouteState extends State<FocusTestRoute> {
                   ],
                 );
               },
+            ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: "请输入用户名",
+                prefixIcon: Icon(Icons.person),
+                // 未获得焦点下划线设为灰色
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                // 获得焦点下划线设为蓝色
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.blue),
+                ),
+              ),
+            ),
+            Theme(
+                data: Theme.of(context).copyWith(
+                    hintColor: Colors.grey[200], //定义下划线颜色
+                    inputDecorationTheme: InputDecorationTheme(
+                        labelStyle: TextStyle(color: Colors.grey),
+                        // 定义label字体样式
+                        hintStyle: TextStyle(
+                            color: Colors.grey, fontSize: 14.0) // 定义提示文本样式
+                        )),
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(
+                          labelText: "用户名",
+                          hintText: "用户名或邮箱",
+                          prefixIcon: Icon(Icons.person)),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.lock),
+                          labelText: "密码",
+                          hintText: "您的登录密码",
+                          hintStyle:
+                              TextStyle(color: Colors.grey, fontSize: 13.0)),
+                      obscureText: true,
+                    )
+                  ],
+                )),
+            Container(
+              decoration: BoxDecoration(
+                  // 下滑线浅灰色，宽度1像素
+                  border: Border(
+                      bottom: BorderSide(color: Colors.grey, width: 1.0))),
+              child: TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                      labelText: "Email",
+                      hintText: "电子邮件地址",
+                      prefixIcon: Icon(Icons.email),
+                      border: InputBorder.none //隐藏下划线
+                      )),
             ),
           ],
         ),
