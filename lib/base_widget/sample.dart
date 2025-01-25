@@ -12,7 +12,7 @@ class _SampleRoute extends State<SampleRoute> {
   @override
   void initState() {
     super.initState();
-    //初始化状态
+    // 初始化状态
     if (kDebugMode) {
       print("initState");
     }

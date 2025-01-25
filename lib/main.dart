@@ -4,6 +4,7 @@ import 'base_widget/button_route.dart';
 import 'base_widget/focus_test_route.dart';
 import 'base_widget/form_test_route.dart';
 import 'base_widget/image_route.dart';
+import 'base_widget/progressIndicator_route.dart';
 import 'base_widget/switch_and_checkbox_route.dart';
 import 'base_widget/text_field_route.dart';
 import 'base_widget/text_route.dart';
@@ -103,6 +104,12 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("open FormTest route"),
               onPressed: () {
                 _toRoute("FormTest", FormTestRoute());
+              },
+            ),
+            TextButton(
+              child: Text("open ProgressIndicator route"),
+              onPressed: () {
+                _toRoute('Display', ProgressIndicatorRoute());
               },
             ),
             TextButton(
