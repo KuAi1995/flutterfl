@@ -40,6 +40,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void _toRoute(String routeName, Widget widget) {
+    Global.widget = widget;
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) {
+        return DisplayRoute(
+          title: routeName,
+        );
+      }),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,121 +66,49 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open Text route"),
               onPressed: () {
-                Global.widget = TextRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'Text',
-                    );
-                  }),
-                );
+                _toRoute('Text', TextRoute());
               },
             ),
             TextButton(
               child: Text("open Button route"),
               onPressed: () {
-                Global.widget = ButtonRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'Button',
-                    );
-                  }),
-                );
+                _toRoute("Button", ButtonRoute());
               },
             ),
             TextButton(
               child: Text("open Image route"),
               onPressed: () {
-                Global.widget = ImageRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'Image',
-                    );
-                  }),
-                );
+                _toRoute("Image", ImageRoute());
               },
             ),
             TextButton(
               child: Text("open SwitchAndCheckBox route"),
               onPressed: () {
-                Global.widget = SwitchAndCheckBoxRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'SwitchAndCheckBox',
-                    );
-                  }),
-                );
+                _toRoute("SwitchAndCheckBox", SwitchAndCheckBoxRoute());
               },
             ),
             TextButton(
               child: Text("open TextField route"),
               onPressed: () {
-                Global.widget = TextFieldRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'TextField',
-                    );
-                  }),
-                );
+                _toRoute("TextField", TextFieldRoute());
               },
             ),
             TextButton(
               child: Text("open FocusTest route"),
               onPressed: () {
-                Global.widget = FocusTestRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'FocusTest',
-                    );
-                  }),
-                );
+                _toRoute("FocusTest", FocusTestRoute());
               },
             ),
             TextButton(
               child: Text("open FormTest route"),
               onPressed: () {
-                Global.widget = FormTestRoute();
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: 'FormTest',
-                    );
-                  }),
-                );
+                _toRoute("FormTest", FormTestRoute());
               },
             ),
             TextButton(
               child: Text("open Display route"),
               onPressed: () {
-                Global.widget = Text('DisplayWidget');
-                // 导航到新路由
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return DisplayRoute(
-                      title: '',
-                    );
-                  }),
-                );
+                _toRoute('Display', Text('DisplayWidget'));
               },
             ),
           ],
