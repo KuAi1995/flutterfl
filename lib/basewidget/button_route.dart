@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonRoute extends StatefulWidget {
-  const ButtonRoute({super.key, required this.title});
-
-  final String title;
+  const ButtonRoute({super.key});
 
   @override
   State<ButtonRoute> createState() => _ButtonRouteState();
@@ -40,47 +38,42 @@ class _ButtonRouteState extends State<ButtonRoute> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Button Widget"),
-      ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          ElevatedButton(
-            child: Text("ElevatedButton"),
-            onPressed: () {},
-          ),
-          TextButton(
-            child: Text("TextButton"),
-            onPressed: () {},
-          ),
-          OutlinedButton(
-            child: Text("OutlinedButton"),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.thumb_up),
-            onPressed: () {},
-          ),
-          ElevatedButton.icon(
-            icon: Icon(Icons.send),
-            label: Text(_send),
-            onPressed: _onPressedSend,
-          ),
-          OutlinedButton.icon(
-            icon: Icon(Icons.add),
-            label: Text(_add),
-            onPressed: _onPressedAdd,
-          ),
-          TextButton.icon(
-            icon: Icon(Icons.info),
-            label: Text(_info),
-            onPressed: _onPressedInfo,
-          ),
-        ],
-      )),
-    );
+    return Center(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        ElevatedButton(
+          child: Text("ElevatedButton"),
+          onPressed: () {},
+        ),
+        TextButton(
+          child: Text("TextButton"),
+          onPressed: () {},
+        ),
+        OutlinedButton(
+          child: Text("OutlinedButton"),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: Icon(Icons.thumb_up),
+          onPressed: () {},
+        ),
+        ElevatedButton.icon(
+          icon: Icon(Icons.send),
+          label: Text(_send),
+          onPressed: _onPressedSend,
+        ),
+        OutlinedButton.icon(
+          icon: Icon(Icons.add),
+          label: Text(_add),
+          onPressed: _onPressedAdd,
+        ),
+        TextButton.icon(
+          icon: Icon(Icons.info),
+          label: Text(_info),
+          onPressed: _onPressedInfo,
+        ),
+      ],
+    ));
   }
 }

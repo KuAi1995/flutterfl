@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ImageRoute extends StatefulWidget {
-  const ImageRoute({super.key, required this.title});
-
-  final String title;
+  const ImageRoute({super.key});
 
   @override
   State<ImageRoute> createState() => _ImageRouteState();
@@ -12,35 +10,32 @@ class ImageRoute extends StatefulWidget {
 class _ImageRouteState extends State<ImageRoute> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Image Widget"),
-      ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Image(image: AssetImage("assets/images/1.jpg"), width: 100.0),
-          Image(
-            image: NetworkImage(
-                "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
-            width: 100.0,
-          ),
-          Image.network(
-            "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
-            width: 100.0,
-          ),
-          ImageAndIconRoute(),
-          Icon(Icons.accessible, color: Colors.green),
-          Icon(Icons.error, color: Colors.green),
-          Icon(Icons.fingerprint, color: Colors.green),
-        ],
-      )),
-    );
+    return Center(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Image(image: AssetImage("assets/images/1.jpg"), width: 100.0),
+        Image(
+          image: NetworkImage(
+              "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
+          width: 100.0,
+        ),
+        Image.network(
+          "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+          width: 100.0,
+        ),
+        ImageAndIconRoute(),
+        Icon(Icons.accessible, color: Colors.green),
+        Icon(Icons.error, color: Colors.green),
+        Icon(Icons.fingerprint, color: Colors.green),
+      ],
+    ));
   }
 }
 
 class ImageAndIconRoute extends StatelessWidget {
+  const ImageAndIconRoute({super.key});
+
   @override
   Widget build(BuildContext context) {
     var img = AssetImage("assets/images/1.jpg");

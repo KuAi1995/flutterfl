@@ -3,9 +3,12 @@ import 'package:flutterfl/basewidget/button_route.dart';
 import 'package:flutterfl/basewidget/text_route.dart';
 
 import 'basewidget/focus_test_route.dart';
+import 'basewidget/form_test_route.dart';
 import 'basewidget/image_route.dart';
-import 'basewidget/switch_and_checkBox_route.dart';
+import 'basewidget/switch_and_checkbox_route.dart';
 import 'basewidget/text_field_route.dart';
+import 'display.dart';
+import 'global.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,11 +54,14 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open Text route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = TextRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TextRoute();
+                    return DisplayRoute(
+                      title: 'Text',
+                    );
                   }),
                 );
               },
@@ -63,12 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open Button route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = ButtonRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return ButtonRoute(
-                      title: '',
+                    return DisplayRoute(
+                      title: 'Button',
                     );
                   }),
                 );
@@ -77,12 +84,13 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open Image route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = ImageRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return ImageRoute(
-                      title: '',
+                    return DisplayRoute(
+                      title: 'Image',
                     );
                   }),
                 );
@@ -91,12 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open SwitchAndCheckBox route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = SwitchAndCheckBoxRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return SwitchAndCheckBoxRoute(
-                      title: '',
+                    return DisplayRoute(
+                      title: 'SwitchAndCheckBox',
                     );
                   }),
                 );
@@ -105,12 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open TextField route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = TextFieldRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TextFieldRoute(
-                      title: '',
+                    return DisplayRoute(
+                      title: 'TextField',
                     );
                   }),
                 );
@@ -119,11 +129,44 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               child: Text("open FocusTest route"),
               onPressed: () {
-                //导航到新路由
+                Global.widget = FocusTestRoute();
+                // 导航到新路由
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return FocusTestRoute();
+                    return DisplayRoute(
+                      title: 'FocusTest',
+                    );
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open FormTest route"),
+              onPressed: () {
+                Global.widget = FormTestRoute();
+                // 导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return DisplayRoute(
+                      title: 'FormTest',
+                    );
+                  }),
+                );
+              },
+            ),
+            TextButton(
+              child: Text("open Display route"),
+              onPressed: () {
+                Global.widget = Text('DisplayWidget');
+                // 导航到新路由
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return DisplayRoute(
+                      title: '',
+                    );
                   }),
                 );
               },
