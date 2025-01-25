@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfl/basewidget/button_route.dart';
-import 'package:flutterfl/basewidget/text_route.dart';
 
-import 'basewidget/focus_test_route.dart';
-import 'basewidget/form_test_route.dart';
-import 'basewidget/image_route.dart';
-import 'basewidget/switch_and_checkbox_route.dart';
-import 'basewidget/text_field_route.dart';
+import 'base_widget/button_route.dart';
+import 'base_widget/focus_test_route.dart';
+import 'base_widget/form_test_route.dart';
+import 'base_widget/image_route.dart';
+import 'base_widget/switch_and_checkbox_route.dart';
+import 'base_widget/text_field_route.dart';
+import 'base_widget/text_route.dart';
 import 'display.dart';
 import 'global.dart';
 
